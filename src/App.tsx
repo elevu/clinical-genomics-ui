@@ -1,10 +1,7 @@
-import * as React from "react";
+import * as React from 'react'
 
 export interface AppProps {
-  name: string;
+  name: string
 }
-export const App = (props: AppProps) => (
-  <h1>
-    Hi! Welcome to {props.name}!
-  </h1>
-);
+
+export const App: React.FC<AppProps> = (props: AppProps) => <h1>Hi! Welcome to {props.name}!</h1>
