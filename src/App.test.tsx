@@ -8,7 +8,7 @@ test('renders learn react link', () => {
   const history = createMemoryHistory()
   const { getByText } = render(
     <Router history={history}>
-      <App name="User" />
+       <App name="User" />
     </Router>
   )
   const linkElement = getByText(/User!/i)
