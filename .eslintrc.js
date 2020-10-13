@@ -32,4 +32,7 @@ module.exports = {
       'eslint-import-resolver-typescript': true,
     },
   },
+  rules: {
+    '@typescript-eslint/no-var-requires': 0,
+  },
 }
