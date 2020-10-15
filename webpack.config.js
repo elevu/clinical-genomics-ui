@@ -29,19 +29,14 @@ const config = {
       },
       {
         test: /\.css$/,
-        loader: 'css-loader',
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
-  plugins: [
-    HTMLWebpackPluginConfig,
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
+  plugins: [HTMLWebpackPluginConfig],
 }
 
 module.exports = config
