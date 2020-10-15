@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -27,10 +26,17 @@ const config = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'awesome-typescript-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|tiff)$/,
+        use: ['file-loader?name=public/[name].[ext]'],
+        exclude: /node_modules/,
       },
     ],
   },

@@ -1,0 +1,14 @@
+#appsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100px;
+    border-radius: 20%;
+}
+
+.appItem {
+    padding: 20px;
+}

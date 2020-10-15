@@ -1,3 +1,4 @@
 import * as React from 'react'
+import { Apps } from '../components/Apps'
 
-export const Home = () => <div>Welcome home *_*</div>
+export const Home = () => <Apps />

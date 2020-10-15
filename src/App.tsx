@@ -14,23 +14,23 @@ export const App: React.FC<AppProps> = (props: AppProps) => (
   <Layout>
     <Header className="header">
       <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">
+      <Menu theme="dark" mode="horizontal" selectedKeys={[useLocation().pathname]}>
+        <Menu.Item key="/">
           <Link to="/">
             <span>Home</span>
           </Link>
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="/trailblazer">
           <Link to="/trailblazer">
             <span>Trailblazer</span>
           </Link>
         </Menu.Item>
-        <Menu.Item key="3">
+        <Menu.Item key="/genotype">
           <Link to="/genotype">
             <span>Genotype</span>
           </Link>
         </Menu.Item>
-        <Menu.Item key="4">
+        <Menu.Item key="/vogue">
           <Link to="/vogue">
             <span>Vogue</span>
           </Link>
