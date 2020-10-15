@@ -14,6 +14,7 @@ const config = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, './build'),
+    publicPath: '/',
     filename: 'bundle.js',
   },
   module: {
@@ -32,6 +33,9 @@ const config = {
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
