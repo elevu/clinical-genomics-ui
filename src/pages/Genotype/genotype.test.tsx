@@ -1,16 +1,16 @@
 import * as React from 'react'
 import { render } from '@testing-library/react'
-import { App } from './App'
 import { createMemoryHistory } from 'history'
 import { Router } from 'react-router-dom'
+import { Genotype } from './genotype'
 
 test('renders learn react link', () => {
   const history = createMemoryHistory()
   const { getByText } = render(
     <Router history={history}>
-      <App name="User" />
+      <Genotype />
     </Router>
   )
-  const linkElement = getByText(/User!/i)
+  const linkElement = getByText(/This page is under development, coming soon!/i)
   expect(linkElement).toBeInTheDocument()
 })
