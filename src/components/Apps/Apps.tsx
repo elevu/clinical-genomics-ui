@@ -34,7 +34,7 @@ const appsList = [
   },
   {
     id: 'genotype',
-    title: 'Genotype',
+    title: 'genotype',
     url: 'https://genotype.scilifelab.se/',
   },
   {
@@ -65,6 +65,7 @@ export const Apps = () => (
       <div key={app.id} className="appItem">
         <a href={app.url}>
           <img
+            className="appLogo"
             src={`https://firebasestorage.googleapis.com/v0/b/cg-internal-portal-prod.appspot.com/o/apps%2F${app.id}.png?alt=media`}></img>
         </a>
         <h3>{app.title}</h3>
