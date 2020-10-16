@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 }
 
-img {
+.appLogo {
     width: 100px;
     border-radius: 20%;
 }
