@@ -64,7 +64,8 @@ export const Apps = () => (
     {appsList.map((app) => (
       <div key={app.id} className="appItem">
         <a href={app.url}>
-          <img src={`public/apps/${app.id}.png`}></img>
+          <img
+            src={`https://firebasestorage.googleapis.com/v0/b/cg-internal-portal-prod.appspot.com/o/apps%2F${app.id}.png?alt=media`}></img>
         </a>
         <h3>{app.title}</h3>
       </div>
