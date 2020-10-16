@@ -4,7 +4,7 @@ import { Trailblazer } from '../pages/trailblazer'
 import { Genotype } from '../pages/Genotype/genotype'
 import { Vogue } from '../pages/vogue'
 import { Home } from '../pages/home'
-import { Unauthorized } from '../pages/Unauthorized'
+import { Unauthorized } from '../pages/unauthorized'
 
 export const Routes = () => {
   return (
