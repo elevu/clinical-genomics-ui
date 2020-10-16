@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "cg-internal-portal-stage",
+    "production": "cg-internal-portal-prod",
+    "stage": "cg-internal-portal-stage"
+  }
+}
