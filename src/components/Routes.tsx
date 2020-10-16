@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Trailblazer } from '../pages/trailblazer'
-import { Genotype } from '../pages/Genotype/genotype'
+import { Genotype } from '../pages/genotype/genotype'
 import { Vogue } from '../pages/vogue'
-import { Home } from '../pages/home'
+import { Home } from '../pages/home/home'
 import { Unauthorized } from '../pages/unauthorized'
 
 export const Routes = () => {
