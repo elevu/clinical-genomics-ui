@@ -5,6 +5,8 @@ import { Genotype } from '../pages/genotype/genotype'
 import { Vogue } from '../pages/vogue'
 import { Home } from '../pages/home/home'
 import { Unauthorized } from '../pages/unauthorized'
+import { ErrorPage } from '../pages/ErrorPage'
+import { SignOutPage } from '../pages/SignOutPage'
 
 export const Routes = () => {
   return (
@@ -23,6 +25,12 @@ export const Routes = () => {
       </Route>
       <Route path="/vogue">
         <Vogue></Vogue>
+      </Route>
+      <Route path="/error">
+        <ErrorPage />
+      </Route>
+      <Route path="/signed-out">
+        <SignOutPage />
       </Route>
     </Switch>
   )
