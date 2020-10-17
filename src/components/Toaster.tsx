@@ -1,7 +1,5 @@
 import { notification } from 'antd'
 
-const handleClose = () => {}
-
 type Props = {
   type: 'error'
   message: string
@@ -16,6 +14,5 @@ export const OpenNotification = ({ type, message, description }: Props) => {
     btn: null,
     key,
     closeIcon: null,
-    onClose: handleClose,
   })
 }
