@@ -10,8 +10,8 @@ const signIn = (
 
   if (!initialized) {
     await GoogleAPI.client.init({
-      apiKey: 'AIzaSyBU76Da-bJ2nUt9S-spV9kY0ND9rtLN8k8',
-      clientId: '577450603786-torqv9ks2cm8u9lsivu8qah11lsmqune.apps.googleusercontent.com',
+      apiKey: 'fake-key',
+      clientId: 'xxx',
       scope: 'https://www.googleapis.com/auth/drive.metadata.readonly',
       discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
       prompt: 'select_account',
