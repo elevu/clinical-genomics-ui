@@ -11,6 +11,7 @@ import {
 import { RootState } from './domain/rootReducer'
 import { connect } from 'react-redux'
 import { compose } from '@reduxjs/toolkit'
+import { imageUrl } from './constants'
 
 export interface AppProps {
   name: string
@@ -36,7 +37,7 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
   return (
     <Layout>
       <Header className="header">
-        <div className="logo" />
+        <img className="logo" src={`${imageUrl}logo.png?alt=media`}></img>
         <Menu theme="dark" mode="horizontal" selectedKeys={[useLocation().pathname]}>
           <Menu.Item key="/">
             <Link to="/">
