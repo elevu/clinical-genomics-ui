@@ -3,7 +3,7 @@ import './App.style.css'
 import { Button, Layout, Menu } from 'antd'
 import { Routes } from './components/Routes'
 import { Link, useLocation } from 'react-router-dom'
-import { initGoogleClient, signOutGoogleClient } from './api/GoogleClient'
+import { initGoogleClient, signOutGoogleClient } from './api/GoogleApi'
 import {
   setSettings as setSettingsAction,
   resetSettings as resetSettingsAction,

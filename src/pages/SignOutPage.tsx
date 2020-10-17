@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Result, Button } from 'antd'
-import { retryGoogleClient } from '../api/GoogleClient'
+import { retryGoogleClient } from '../api/GoogleApi'
 import { compose } from '@reduxjs/toolkit'
 import { connect } from 'react-redux'
 import { setSettings as setSettingsAction } from '../domain/settings/slice'

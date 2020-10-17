@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getUsers } from '../../api/GitHub'
+import { getUsers } from '../../api/GitHubApi'
 
 import './GitHubStats.style.css'
 

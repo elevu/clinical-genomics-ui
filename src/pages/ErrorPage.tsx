@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Result, Button } from 'antd'
 import { compose } from '@reduxjs/toolkit'
 
-import { retryGoogleClient } from '../api/GoogleClient'
+import { retryGoogleClient } from '../api/GoogleApi'
 import { setSettings as setSettingsAction } from '../domain/settings/slice'
 
 const mapDispatch = { setSettings: setSettingsAction } as const
