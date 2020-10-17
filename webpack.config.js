@@ -47,7 +47,12 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
-  plugins: [HTMLWebpackPluginConfig],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      favicon: './public/logo.png',
+    }),
+  ],
 }
 
 module.exports = config
