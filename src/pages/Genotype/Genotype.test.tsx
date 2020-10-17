@@ -2,7 +2,7 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 import { createMemoryHistory } from 'history'
 import { Router } from 'react-router-dom'
-import { Genotype } from './genotype'
+import { Genotype } from './Genotype'
 
 test('renders learn react link', () => {
   const history = createMemoryHistory()

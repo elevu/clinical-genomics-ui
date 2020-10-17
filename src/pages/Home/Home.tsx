@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Apps } from '../../components/Apps/Apps'
 import { imageUrl } from '../../constants'
-import './home.style.css'
+import './Home.style.css'
 
 export const Home = () => (
   <div>
