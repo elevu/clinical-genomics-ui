@@ -59,6 +59,11 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
               <span>Vogue</span>
             </Link>
           </Menu.Item>
+          <Menu.Item key="/github-stats">
+            <Link to="/github-stats">
+              <span>GitHub Stats</span>
+            </Link>
+          </Menu.Item>
         </Menu>
       </Header>
       <Content>
