@@ -13,10 +13,10 @@ type GetUsersResponse = {
   users: Array<ApiUser>
 }
 
-export const getUsers = async (): Promise<GetUsersResponse> => {
+export const getRepos = async (): Promise<GetUsersResponse> => {
   let response = { users: [] as any }
   try {
-    const request = await fetch(`${gitHubURL}orgs/Clinical-Genomics/members`, {
+    const request = await fetch(`${gitHubURL}orgs/Clinical-Genomics/repos`, {
       mode: 'cors',
     })
     response = await request.json()
@@ -24,7 +24,7 @@ export const getUsers = async (): Promise<GetUsersResponse> => {
     OpenNotification({
       type: 'error',
       message: 'Unable to fetch',
-      description: 'Could not fetch GitHub users',
+      description: 'Could not fetch GitHub repos',
     })
   }
   return response

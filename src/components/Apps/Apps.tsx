@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './Apps.style.css'
+import { imageUrl } from '../../helpers/constants'
 
 const appsList = [
   {
@@ -60,13 +61,11 @@ const appsList = [
 ]
 
 export const Apps = () => (
-  <div id="appsContainer">
+  <div className="apps-container">
     {appsList.map((app) => (
-      <div key={app.id} className="appItem">
+      <div key={app.id} className="app-item">
         <a href={app.url}>
-          <img
-            className="appLogo"
-            src={`https://firebasestorage.googleapis.com/v0/b/cg-internal-portal-prod.appspot.com/o/apps%2F${app.id}.png?alt=media`}></img>
+          <img className="app-logo" src={`${imageUrl}apps%2F${app.id}.png?alt=media`}></img>
         </a>
         <h3>{app.title}</h3>
       </div>

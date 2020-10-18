@@ -11,7 +11,7 @@ import {
 import { RootState } from './domain/rootReducer'
 import { connect } from 'react-redux'
 import { compose } from '@reduxjs/toolkit'
-import { imageUrl } from './constants'
+import { imageUrl } from './helpers/constants'
 
 export interface AppProps {
   name: string
