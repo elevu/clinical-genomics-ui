@@ -4,7 +4,7 @@ import { createMemoryHistory } from 'history'
 import { Router } from 'react-router-dom'
 import { Genotype } from './Genotype'
 
-test('renders learn react link', () => {
+test('renders page', () => {
   const history = createMemoryHistory()
   const { getByText } = render(
     <Router history={history}>

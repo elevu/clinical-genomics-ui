@@ -1,14 +1,14 @@
-#appsContainer {
+.apps-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.appLogo {
+.app-logo {
     width: 100px;
     border-radius: 20%;
 }
 
-.appItem {
+.app-item {
     padding: 20px;
 }

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { imageUrl } from '../../constants'
+import { imageUrl } from '../../helpers/constants'
 import './Home.style.css'
 
 export const Home = () => (
