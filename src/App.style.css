@@ -1,5 +1,9 @@
 @import '~antd/dist/antd.css';
 
+.app-layout {
+    min-height: 100%;
+}
+
 .logo {
     width: 50px;
     float: left;

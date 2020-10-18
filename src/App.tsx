@@ -35,7 +35,7 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
     signOutGoogleClient(resetSettings)
   }
   return (
-    <Layout>
+    <Layout className="app-layout">
       <Header className="header">
         <img className="logo" src={`${imageUrl}logo.png?alt=media`}></img>
         <Menu theme="dark" mode="horizontal" selectedKeys={[useLocation().pathname]}>
@@ -75,7 +75,9 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
         <Routes />
       </Content>
       <Footer style={{ textAlign: 'center' }}>
-        Clinical Genomics ©2020
+        <a href="https://www.scilifelab.se/facilities/clinical-genomics-stockholm/">
+          Clinical Genomics ©2020
+        </a>
         <Button onClick={() => setStore()}>Login</Button>
         <Button onClick={() => handleSignOut()}>Sign Out</Button>
       </Footer>

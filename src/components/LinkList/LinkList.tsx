@@ -14,7 +14,7 @@ const appsList = [
   },
   {
     id: 'supportsystem',
-    title: 'Support System',
+    title: 'Support',
     url: 'https://clinical-scilifelab.supportsystem.com/scp/login.php',
   },
   {
@@ -34,7 +34,7 @@ const appsList = [
   },
   {
     id: 'genotype',
-    title: 'genotype',
+    title: 'Genotype',
     url: 'https://genotype.scilifelab.se/',
   },
   {
@@ -67,8 +67,8 @@ export const LinkList = () => (
           <img
             className="app-logo"
             src={`https://firebasestorage.googleapis.com/v0/b/cg-internal-portal-prod.appspot.com/o/apps%2F${app.id}.png?alt=media`}></img>
+          <div className="app-name">{app.title}</div>
         </a>
-        <h3>{app.title}</h3>
       </div>
     ))}
   </div>
