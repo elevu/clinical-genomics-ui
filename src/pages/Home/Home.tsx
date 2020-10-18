@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Apps } from '../../components/Apps/Apps'
-import { imageUrl } from '../../constants'
+import { imageUrl } from '../../helpers/constants'
 import './Home.style.css'
 
 export const Home = () => (
