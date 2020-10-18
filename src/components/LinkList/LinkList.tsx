@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './Apps.style.css'
+import './Links.style.css'
 
 const appsList = [
   {
@@ -59,7 +59,7 @@ const appsList = [
   },
 ]
 
-export const Apps = () => (
+export const LinkList = () => (
   <div id="appsContainer">
     {appsList.map((app) => (
       <div key={app.id} className="appItem">

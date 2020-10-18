@@ -8,6 +8,7 @@ import { Unauthorized } from '../pages/Unauthorized'
 import { GitHubStats } from '../pages/GitHubStats/GitHubStats'
 import { ErrorPage } from '../pages/ErrorPage'
 import { SignOutPage } from '../pages/SignOutPage'
+import { LinkList } from './LinkList/LinkList'
 
 export const Routes = () => {
   return (
@@ -29,6 +30,9 @@ export const Routes = () => {
       </Route>
       <Route path="/github-stats">
         <GitHubStats></GitHubStats>
+      </Route>
+      <Route path="/links">
+        <LinkList></LinkList>
       </Route>
       <Route path="/error">
         <ErrorPage />

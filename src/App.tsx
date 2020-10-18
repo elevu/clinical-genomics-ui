@@ -64,6 +64,11 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
               <span>GitHub Stats</span>
             </Link>
           </Menu.Item>
+          <Menu.Item key="/links">
+            <Link to="/links">
+              <span>Links</span>
+            </Link>
+          </Menu.Item>
         </Menu>
       </Header>
       <Content>
