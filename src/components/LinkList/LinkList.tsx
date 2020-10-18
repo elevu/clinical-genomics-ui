@@ -60,7 +60,7 @@ const appsList = [
 ]
 
 export const LinkList = () => (
-  <div id="apps-container">
+  <div className="links-container">
     {appsList.map((app) => (
       <div key={app.id} className="app-item">
         <a href={app.url}>
