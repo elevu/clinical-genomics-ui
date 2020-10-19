@@ -21,7 +21,7 @@ jobs:
       run: yarn build
       env:
         BACKEND_CLINICAL_URL: ${{ secrets.STAGE_BACKEND_CLINICAL_URL }}
-        BACKEND_URL: ${{ secrets.STAGE_BACKEND_URL }}
+        BACKEND_TRAILBLAZER_URL: ${{ secrets.STAGE_BACKEND_TRAILBLAZER_URL }}
         GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
     - name: Archive Stage Artifact
       uses: actions/upload-artifact@master
@@ -32,7 +32,7 @@ jobs:
       run: yarn build
       env:
         BACKEND_CLINICAL_URL: ${{ secrets.PRODUCTION_BACKEND_CLINICAL_URL }}
-        BACKEND_URL: ${{ secrets.PRODUCTION_BACKEND_URL }}
+        BACKEND_TRAILBLAZER_URL: ${{ secrets.PRODUCTION_BACKEND_TRAILBLAZER_URL }}
         GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
     - name: Archive Production Artifact
       uses: actions/upload-artifact@master

@@ -1,11 +1,6 @@
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/src/index.html',
-  filename: 'index.html',
-  inject: 'body',
-})
 
 const config = {
   entry: './src/index.tsx',
@@ -51,6 +46,11 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: './public/logo.png',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.GOOGLE_OAUTH_CLIENT_ID': JSON.stringify(process.env.GOOGLE_OAUTH_CLIENT_ID),
+      'process.env.BACKEND_TRAILBLAZER_URL': JSON.stringify(process.env.BACKEND_TRAILBLAZER_URL),
+      'process.env.BACKEND_CLINICAL_URL': JSON.stringify(process.env.BACKEND_CLINICAL_URL),
     }),
   ],
 }

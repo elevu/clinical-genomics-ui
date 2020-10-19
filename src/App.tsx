@@ -27,7 +27,7 @@ const mapState = ({ settings }: RootState) => ({ settings } as const)
 
 type Props = ReturnType<typeof mapState> & typeof mapDispatch
 
-const AppComponent = ({ setSettings, resetSettings }: Props) => {
+const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
   const setStore = () => {
     initGoogleClient(setSettings)
   }
