@@ -1,32 +1,32 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { Result, Button } from 'antd'
-import { compose } from '@reduxjs/toolkit'
 
+import { Result, Button } from 'antd'
 import { retryGoogleClient } from '../api/GoogleApi'
+import { compose } from '@reduxjs/toolkit'
+import { connect } from 'react-redux'
 import { setSettings as setSettingsAction } from '../domain/settings/slice'
 
 const mapDispatch = { setSettings: setSettingsAction } as const
 
 type Props = typeof mapDispatch
 
-const ErrorPageComponent = ({ setSettings }: Props) => {
+const SignOutPageComponent = ({ setSettings }: Props) => {
   const handleRetry = () => {
     retryGoogleClient(setSettings)
   }
 
   return (
     <Result
-      status="500"
-      title="401"
-      subTitle="Sorry, you are not authenticated. Did you use your Clinical Genomics Google account?"
+      status="success"
+      title="Successfully signed out"
+      subTitle="In order to use this app you have to be signed in"
       extra={
         <Button type="primary" onClick={handleRetry}>
-          Retry
+          Sign in
         </Button>
       }
     />
   )
 }
 
-export const ErrorPage = compose(connect(null, mapDispatch))(ErrorPageComponent)
+export const SignOut = compose(connect(null, mapDispatch))(SignOutPageComponent)

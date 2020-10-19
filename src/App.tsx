@@ -44,17 +44,17 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
               <span>Home</span>
             </Link>
           </Menu.Item>
-          <Menu.Item key="/trailblazer">
+          <Menu.Item key="/trailblazer" disabled={!settings.token}>
             <Link to="/trailblazer">
               <span>Trailblazer</span>
             </Link>
           </Menu.Item>
-          <Menu.Item key="/genotype">
+          <Menu.Item key="/genotype" disabled={!settings.token}>
             <Link to="/genotype">
               <span>Genotype</span>
             </Link>
           </Menu.Item>
-          <Menu.Item key="/vogue">
+          <Menu.Item key="/vogue" disabled={!settings.token}>
             <Link to="/vogue">
               <span>Vogue</span>
             </Link>
@@ -92,7 +92,7 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
         </div>
       </Header>
       <Content>
-        <Routes />
+        <Routes token={settings.token} />
       </Content>
       <Footer style={{ textAlign: 'center' }}>
         <a href="https://www.scilifelab.se/facilities/clinical-genomics-stockholm/">

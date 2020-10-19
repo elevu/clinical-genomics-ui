@@ -6,40 +6,26 @@ import { Vogue } from '../pages/Vogue'
 import { Home } from '../pages/Home/Home'
 import { Unauthorized } from '../pages/Unauthorized'
 import { GitHubStats } from '../pages/GitHubStats/GitHubStats'
-import { ErrorPage } from '../pages/ErrorPage'
-import { SignOutPage } from '../pages/SignOutPage'
+import { Error } from '../pages/Error'
+import { SignOut } from '../pages/SignOut'
 import { LinkList } from './LinkList/LinkList'
 
-export const Routes = () => {
+export interface RoutesProps {
+  token: string
+}
+
+export const Routes = (props: RoutesProps) => {
   return (
     <Switch>
-      <Route path="/" exact>
-        <Home></Home>
-      </Route>
-      <Route path="/unauthorized" exact>
-        <Unauthorized></Unauthorized>
-      </Route>
-      <Route path="/trailblazer">
-        <Trailblazer></Trailblazer>
-      </Route>
-      <Route path="/genotype">
-        <Genotype></Genotype>
-      </Route>
-      <Route path="/vogue">
-        <Vogue></Vogue>
-      </Route>
-      <Route path="/github-stats">
-        <GitHubStats></GitHubStats>
-      </Route>
-      <Route path="/links">
-        <LinkList></LinkList>
-      </Route>
-      <Route path="/error">
-        <ErrorPage />
-      </Route>
-      <Route path="/signed-out">
-        <SignOutPage />
-      </Route>
+      <Route path="/" exact component={Home}></Route>
+      <Route path="/unauthorized" exact component={Unauthorized}></Route>
+      <Route path="/trailblazer" component={props.token ? Trailblazer : Unauthorized}></Route>
+      <Route path="/genotype" component={Genotype}></Route>
+      <Route path="/vogue" component={Vogue}></Route>
+      <Route path="/github-stats" component={GitHubStats}></Route>
+      <Route path="/links" component={LinkList}></Route>
+      <Route path="/error" component={Error}></Route>
+      <Route path="/signed-out" component={SignOut}></Route>
     </Switch>
   )
 }

@@ -5,8 +5,8 @@ export const Unauthorized = () => {
   return (
     <Result
       status="403"
-      title="403"
-      subTitle="Sorry, you are not authorized to access this page. Login with your Google account"
+      title="Not authorized"
+      subTitle="Login with your Clinical Genomics Google account to access this page"
     />
   )
 }
