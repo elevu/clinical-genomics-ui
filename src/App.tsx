@@ -70,6 +70,26 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
             </Link>
           </Menu.Item>
         </Menu>
+        <div>
+          {!settings.token && (
+            <div>
+              <Button className="google-button" type="primary" onClick={() => setStore()}>
+                Login
+              </Button>
+            </div>
+          )}
+          {settings.token && (
+            <div>
+              <div className="greeting">
+                Welcome {settings.user?.name}!{' '}
+                <img className="google-avatar" src={settings.user?.avatar}></img>
+              </div>
+              <Button className="google-button" type="primary" onClick={() => handleSignOut()}>
+                Log Out
+              </Button>
+            </div>
+          )}
+        </div>
       </Header>
       <Content>
         <Routes />
@@ -78,8 +98,6 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
         <a href="https://www.scilifelab.se/facilities/clinical-genomics-stockholm/">
           Clinical Genomics ©2020
         </a>
-        <Button onClick={() => setStore()}>Login</Button>
-        <Button onClick={() => handleSignOut()}>Sign Out</Button>
       </Footer>
     </Layout>
   )
