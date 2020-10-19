@@ -3,7 +3,7 @@ import { ActionCreatorWithPayload, ActionCreatorWithoutPayload } from '@reduxjs/
 import { SettingState } from '../domain/settings/types'
 
 const signIn = (
-  setSettings: ActionCreatorWithPayload<SettingState, string>,
+  setSettings: ActionCreatorWithPayload<SettingState>,
   initialized = false
 ) => async () => {
   const GoogleAPI = (window as any).gapi
@@ -11,7 +11,7 @@ const signIn = (
   if (!initialized) {
     await GoogleAPI.client.init({
       apiKey: 'xxx',
-      clientId: 'xxx',
+      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
       scope: 'https://www.googleapis.com/auth/drive.metadata.readonly',
       discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
       prompt: 'select_account',
