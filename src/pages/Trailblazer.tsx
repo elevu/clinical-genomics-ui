@@ -12,11 +12,11 @@ export const Trailblazer = () => (
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
           style={{ height: '100%' }}>
-          <Menu.Item key="1">Option 1</Menu.Item>
-          <Menu.Item key="2">Option 1</Menu.Item>
+          <Menu.Item key="1">Analysis</Menu.Item>
+          <Menu.Item key="2">By Family</Menu.Item>
         </Menu>
       </Sider>
-      <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
+      <Content style={{ padding: '0 24px', minHeight: 280 }} />
     </Layout>
     !
   </div>

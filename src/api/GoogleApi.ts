@@ -9,13 +9,16 @@ const signIn = (
   const GoogleAPI = (window as any).gapi
 
   if (!initialized) {
-    await GoogleAPI.client.init({
-      apiKey: 'xxx',
-      clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
-      scope: 'https://www.googleapis.com/auth/drive.metadata.readonly',
-      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
-      prompt: 'select_account',
-    })
+    try {
+      await GoogleAPI.client.init({
+        clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
+        scope: 'https://www.googleapis.com/auth/drive.metadata.readonly',
+        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
+        prompt: 'select_account',
+      })
+    } catch (error) {
+      return history.push('/error')
+    }
   }
 
   const GoogleAuth = GoogleAPI.auth2.getAuthInstance()
@@ -33,7 +36,7 @@ const signIn = (
   setSettings({
     token,
     user: {
-      name: profile.getName(),
+      name: profile.getGivenName(),
       email: profile.getEmail(),
       avatar: profile.getImageUrl(),
     },

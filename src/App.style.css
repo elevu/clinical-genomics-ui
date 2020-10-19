@@ -13,3 +13,22 @@
 .site-layout-background {
   background: #fff;
 }
+
+.google-button {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+
+}
+
+.greeting {
+    position: absolute;
+    top: -2px;
+    right: 180px;
+    color: white;
+}
+
+.google-avatar {
+    max-width: 45px;
+    padding: 5px;
+}
