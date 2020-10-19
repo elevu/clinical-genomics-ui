@@ -18,7 +18,7 @@ export const Routes = (props: RoutesProps) => {
   return (
     <Switch>
       <Route path="/" exact component={Home}></Route>
-      <Route path="/unauthorized" exact component={Unauthorized}></Route>
+      <Route path="/unauthorized" component={Unauthorized}></Route>
       <Route path="/trailblazer" component={props.token ? Trailblazer : Unauthorized}></Route>
       <Route path="/genotype" component={Genotype}></Route>
       <Route path="/vogue" component={Vogue}></Route>
