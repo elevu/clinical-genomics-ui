@@ -64,9 +64,7 @@ export const LinkList = () => (
     {appsList.map((app) => (
       <div key={app.id} className="app-item">
         <a href={app.url}>
-          <img
-            className="app-logo"
-            src={`https://firebasestorage.googleapis.com/v0/b/cg-internal-portal-prod.appspot.com/o/apps%2F${app.id}.png?alt=media`}></img>
+          <img className="app-logo" src={`/public/apps/${app.id}.png`}></img>
           <div className="app-name">{app.title}</div>
         </a>
       </div>
