@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './App.style.css'
-import { Button, Layout, Menu, Skeleton } from 'antd'
+import { Button, Layout, Menu } from 'antd'
 import { Routes } from './components/Routes'
 import { Link, useLocation } from 'react-router-dom'
 import { initGoogleClient, signOutGoogleClient } from './api/GoogleApi'
@@ -79,15 +79,13 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
           )}
           {settings.token && (
             <div>
-              <Skeleton>
-                <div className="greeting">
-                  Welcome {settings.user?.name}!{' '}
-                  <img className="google-avatar" src={settings.user?.avatar}></img>
-                </div>
-                <Button className="google-button" type="primary" onClick={() => handleSignOut()}>
-                  Log Out
-                </Button>
-              </Skeleton>
+              <div className="greeting">
+                Welcome {settings.user?.name}!{' '}
+                <img className="google-avatar" src={settings.user?.avatar}></img>
+              </div>
+              <Button className="google-button" type="primary" onClick={() => handleSignOut()}>
+                Log Out
+              </Button>
             </div>
           )}
         </div>
