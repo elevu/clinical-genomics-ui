@@ -31,7 +31,7 @@ const config = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|tiff)$/,
-        use: ['file-loader?name=public/[name].[ext]'],
+        use: ['file-loader?name=src/assets/[name].[ext]'],
         exclude: /node_modules/,
       },
     ],
@@ -41,11 +41,17 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    alias: {
+      domain: path.resolve(__dirname, './src/domain/'),
+      assets: path.resolve(__dirname, './src/assets/'),
+      components: path.resolve(__dirname, './src/components/'),
+      pages: path.resolve(__dirname, './src/pages/'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: './public/logo.png',
+      favicon: './src/assets/logo.png',
     }),
     new webpack.DefinePlugin({
       'process.env.GOOGLE_OAUTH_CLIENT_ID': JSON.stringify(process.env.GOOGLE_OAUTH_CLIENT_ID),

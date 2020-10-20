@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './App.style.css'
 import { Button, Layout, Menu } from 'antd'
 import { Routes } from './components/Routes'
@@ -11,7 +11,7 @@ import {
 import { RootState } from './domain/rootReducer'
 import { connect } from 'react-redux'
 import { compose } from '@reduxjs/toolkit'
-import { imageUrl } from './helpers/constants'
+import Logo from 'assets/logo.png'
 
 export interface AppProps {
   name: string
@@ -37,7 +37,7 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
   return (
     <Layout className="app-layout">
       <Header className="header">
-        <img className="logo" src={`${imageUrl}logo.png?alt=media`}></img>
+        <img className="logo" src={Logo}></img>
         <Menu theme="dark" mode="horizontal" selectedKeys={[useLocation().pathname]}>
           <Menu.Item key="/">
             <Link to="/">
