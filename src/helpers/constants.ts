@@ -1,5 +1,3 @@
-export const assetsDir = '/src/assets/'
-
 // Antd presets colors
 export const presets: string[] = [
   'magenta',

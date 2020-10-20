@@ -11,7 +11,7 @@ import {
 import { RootState } from './domain/rootReducer'
 import { connect } from 'react-redux'
 import { compose } from '@reduxjs/toolkit'
-import { assetsDir } from './helpers/constants'
+import Logo from 'assets/logo.png'
 
 export interface AppProps {
   name: string
@@ -37,7 +37,7 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
   return (
     <Layout className="app-layout">
       <Header className="header">
-        <img className="logo" src={`${assetsDir}logo.png`}></img>
+        <img className="logo" src={Logo}></img>
         <Menu theme="dark" mode="horizontal" selectedKeys={[useLocation().pathname]}>
           <Menu.Item key="/">
             <Link to="/">

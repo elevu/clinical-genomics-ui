@@ -41,6 +41,12 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+    alias: {
+      domain: path.resolve(__dirname, './src/domain/'),
+      assets: path.resolve(__dirname, './src/assets/'),
+      components: path.resolve(__dirname, './src/components/'),
+      pages: path.resolve(__dirname, './src/pages/'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

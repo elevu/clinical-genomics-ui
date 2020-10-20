@@ -1,9 +1,9 @@
 import * as React from 'react'
 import './Home.style.css'
-import { assetsDir } from '../../helpers/constants'
+import MainLogo from 'assets/cg-big-logo.png'
 
 export const Home = () => (
   <div>
-    <img className="main-logo" src={`${assetsDir}cg-big-logo.png`}></img>
+    <img className="main-logo" src={MainLogo}></img>
   </div>
 )
