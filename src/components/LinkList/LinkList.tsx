@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './Links.style.css'
+import { assetsDir } from '../../helpers/constants'
 
 const appsList = [
   {
@@ -64,7 +65,7 @@ export const LinkList = () => (
     {appsList.map((app) => (
       <div key={app.id} className="app-item">
         <a href={app.url}>
-          <img className="app-logo" src={`/public/apps/${app.id}.png`}></img>
+          <img className="app-logo" src={`${assetsDir}apps/${app.id}.png`}></img>
           <div className="app-name">{app.title}</div>
         </a>
       </div>
