@@ -12,7 +12,9 @@ export const GitHubStats = () => {
   useEffect(() => {
     getRepos().then((response) => {
       setRepos(response as any)
-      setIsLoading(false)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 1000)
     })
   }, [])
 
