@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.style.css'
-import { Button, Layout, Menu } from 'antd'
+import { Button, Image, Layout, Menu } from 'antd'
 import { Routes } from './components/Routes'
 import { Link, useLocation } from 'react-router-dom'
 import { initGoogleClient, signOutGoogleClient } from './api/GoogleApi'
@@ -10,7 +10,7 @@ import {
 } from './domain/settings/slice'
 import { RootState } from './domain/rootReducer'
 import { connect } from 'react-redux'
-import { compose } from '@reduxjs/toolkit'
+import AvatarFallback from 'assets/avatar-fall-back.png'
 import Logo from 'assets/logo.png'
 
 export interface AppProps {
@@ -82,7 +82,11 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
             <div>
               <div className="greeting">
                 Welcome {settings.user?.name}!{' '}
-                <img className="google-avatar" src={settings.user?.avatar}></img>
+                <Image
+                  className="google-avatar"
+                  src={settings.user?.avatar}
+                  fallback={AvatarFallback}
+                />
               </div>
               <Button className="google-button" type="primary" onClick={() => handleSignOut()}>
                 Log Out
@@ -103,4 +107,4 @@ const AppComponent = ({ settings, setSettings, resetSettings }: Props) => {
   )
 }
 
-export const App = compose(connect(mapState, mapDispatch))(AppComponent)
+export const App = connect(mapState, mapDispatch)(AppComponent)
