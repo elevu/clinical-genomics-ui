@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Layout, Menu } from 'antd'
+import { Layout, Menu, Result } from 'antd'
 
 const { Content, Sider } = Layout
 
@@ -16,7 +16,9 @@ export const Trailblazer = () => (
           <Menu.Item key="2">By Family</Menu.Item>
         </Menu>
       </Sider>
-      <Content style={{ padding: '0 24px', minHeight: 280 }} />
+      <Content style={{ padding: '0 24px', minHeight: 280 }}>
+        <Result status="404" title="404" subTitle="This page is under development, coming soon!" />
+      </Content>
     </Layout>
     !
   </div>
