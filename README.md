@@ -28,25 +28,23 @@ You will also see any lint errors in the console.
 
 Launches the Jest test runner.<br />
 
-
-## Linting and code formatting
-
-For consistency and code quality [Eslint](https://eslint.org/) and the formatter [Prettier](https://prettier.io/) are used.
-Running:
-```bash
-yarn lint
-```
-will display both linting and formatting issues in the code.
-
-To fix these errors run:
-```bash
-yarn lint --fix
-```
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+For consistency and code quality [Eslint](https://eslint.org/) is used.
+Running:
+### `yarn lint`
+will display linting issues.
+
+To fix these errors run:
+### `yarn lint --fix`
+
+
+To analyze the minified bundle with source-map-explorer run:
+### `yarn analyze`
+
 
 The app is deployed to Firebase via GitHub actions.
 
