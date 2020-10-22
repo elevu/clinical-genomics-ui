@@ -1,6 +1,10 @@
+
 ## About
 
 [Clinical Genomics UI](https://cg-internal-portal-prod.web.app/) is the internal portal for [Clinical Genomics](https://www.scilifelab.se/facilities/clinical-genomics-stockholm/)
+
+
+![Clinical Genomics logo](https://github.com/Clinical-Genomics/clinical-genomics-ui/blob/master/src/assets/cg-big-logo.png)
 
 
 ## Available Scripts
