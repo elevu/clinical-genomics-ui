@@ -16,7 +16,7 @@ The environmental variables needed to run the app are:
 
 To run the app with the environmental variables:
 
-### `GOOGLE_OAUTH_CLIENT_ID="client-id-for-the-app" BACKEND_TRAILBLAZER_URL="url-for-the-trailblazer-backend-service" BACKEND_CLINICAL_URL="url-for-the-clinical-backend-service" yarn dev`
+`GOOGLE_OAUTH_CLIENT_ID="client-id-for-the-app" BACKEND_TRAILBLAZER_URL="url-for-the-trailblazer-backend-service" BACKEND_CLINICAL_URL="url-for-the-clinical-backend-service" yarn dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3030](http://localhost:3000) to view it in the browser.
