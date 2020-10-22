@@ -28,6 +28,21 @@ You will also see any lint errors in the console.
 
 Launches the Jest test runner.<br />
 
+
+## Linting and code formatting
+
+For consistency and code quality [Eslint](https://eslint.org/) and the formatter [Prettier](https://prettier.io/) are used.
+Running:
+```bash
+yarn lint
+```
+will display both linting and formatting issues in the code.
+
+To fix these errors run:
+```bash
+yarn lint --fix
+```
+
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br />
