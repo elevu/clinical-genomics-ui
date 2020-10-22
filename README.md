@@ -10,9 +10,9 @@ To install dependencies run:
 ### `yarn install`
 
 The environmental variables needed to run the app are:
-- **GOOGLE_OAUTH_CLIENT_ID** Google Client Id needed to login with your Google account
-- **BACKEND_TRAILBLAZER_URL** URL for the Trailblazer service endpoint
-- **BACKEND_CLINICAL_URL** URL for the Clinical service endpoint
+* **GOOGLE_OAUTH_CLIENT_ID** Google Client Id needed to login with your Google account
+* **BACKEND_TRAILBLAZER_URL** URL for the Trailblazer service endpoint
+* **BACKEND_CLINICAL_URL** URL for the Clinical service endpoint
 
 To run the app with the environmental variables:
 
@@ -27,6 +27,21 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the Jest test runner.<br />
+
+
+## Linting and code formatting
+
+For consistency and code quality [Eslint](https://eslint.org/) and the formatter [Prettier](https://prettier.io/) are used.
+Running:
+```bash
+yarn lint
+```
+will display both linting and formatting issues in the code.
+
+To fix these errors run:
+```bash
+yarn lint --fix
+```
 
 ### `yarn build`
 
